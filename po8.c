@@ -22,7 +22,7 @@ main()
     printf("Enter source string\n");    
     gets(source);    
     copy_string(target, source);    
-    printf("Target string is \"%s\"\n", target); 
+    printf("Target string is %s\n", target); 
     printf("Enter string1\n");    
     gets(str1);
     printf("Enter string2\n");    
