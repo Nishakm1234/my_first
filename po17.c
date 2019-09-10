@@ -13,8 +13,7 @@ int main()
     
     for(i=0; i<3; ++i)
     {
-        s[i].roll_no = i+1;
-        printf("Enter Roll no\n");
+        printf("Enter Roll no:");
 	scanf("%d",&s[i].roll_no);
         printf("Enter name: ");
         scanf("%s",s[i].name);
@@ -29,9 +28,6 @@ int main()
  printf("Roll_no\t\tName\t\tAge\t\tPhoneNo\t\t \n");
     for(i=0; i<3; ++i)
     {
-        
-       
-        
         printf("%d\t\t%s\t\t%d\t\t%s\t\t\n",s[i].roll_no,s[i].name,s[i].age,s[i].phone);
         
     }
