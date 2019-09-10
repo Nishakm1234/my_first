@@ -123,6 +123,21 @@ void print_rec(struct Node *node)
 
 }
 
+void printMiddle(struct Node *head)  
+{  
+    struct Node *slow_ptr = head;  
+    struct Node *fast_ptr = head;  
+  
+    if (head!=NULL)  
+    {  
+        while (fast_ptr != NULL && fast_ptr->next != NULL)  
+        {  
+            fast_ptr = fast_ptr->next->next;  
+            slow_ptr = slow_ptr->next;  
+        }  
+        printf("The middle element is [%d]\n\n", slow_ptr->data);  
+    }  
+}  
 
 void main ()
 {
@@ -132,7 +147,7 @@ void main ()
 
 	while(1)
 	{
-		printf ("1.insert at end:\n2.insert at beginning\n3.insert after position\n4.print\n5.delete a number\n6.delete at position\n7.Recursive print\n8.exit\nEnter your choice:\n");
+		printf ("1.insert at end:\n2.insert at beginning\n3.insert after position\n4.print\n5.delete a number\n6.delete at position\n7.Recursive print\n8.Middle element\n9.exit\nEnter your choice:\n");
 		scanf("%d",&ch);
 
 		switch(ch)
@@ -164,8 +179,9 @@ void main ()
 				print_rec(head);
 				printf("\n");
 				break;
-			
-			case 8:exit(1);
+			case 8:printMiddle(head);
+				break;
+			case 9:exit(1);
 		}
 	}
 
