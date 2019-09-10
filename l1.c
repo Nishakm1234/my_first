@@ -12,7 +12,7 @@ struct Node {
 void printList(struct Node* n) 
 { 
     while (n != NULL) { 
-        printf(" %d ", n->data); 
+        printf(" %d\n", n->data); 
         n = n->next; 
     } 
 } 
