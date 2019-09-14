@@ -18,6 +18,7 @@ class Child:public Parent
     		} 
 }; 
   
+
  
 int main() 
 { 
